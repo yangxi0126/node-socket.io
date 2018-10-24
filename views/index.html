@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>websocket</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/index.css"/>
+</head>
+<body>
+<div id="loginbox">
+    输入你在群聊中的昵称
+    <br/>
+    <br/>
+    <div>
+        <input id="userName" class="input-form" type="text" placeholder="请输入用户名"/>
+        <input id="submit" class="input-form" type="button" value="提交" onclick="CHAT.userNameSubmit();"/>
+    </div>
+</div>
+<div id="chatbox">
+    <div class="header clear">
+        <span class="name">来啊！互相伤害啊！</span>
+        <span class="logout" onclick="CHAT.logout()">退出</span>
+        <span id="showUserName" class="user"></span>
+    </div>
+    <div id="doc">
+        <div id="chat">
+            <div id="message" class="message">
+                <div id="onLineCounts"></div>
+            </div>
+            <div class="input-box">
+                <textarea id="content" class="input-form" cols="30" rows="10" placeholder="输入聊天内容 "></textarea>
+                <input id="mjr_send" type="button" class="input-form button-form" value="提交" onclick="CHAT.submit();"/>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/javascripts/sock.js"></script>
+<script src="/javascripts/json3.js"></script>
+<script src="/javascripts/index.js"></script>
+</html>
